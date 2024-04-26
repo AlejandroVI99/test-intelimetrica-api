@@ -35,6 +35,14 @@ class Api::V1::RestaurantsController < ApplicationController
     head :ok
   end
 
+  def statistics
+    @statistics = Restaurant.statistics(
+      params[:latitude],
+      params[:longitude],
+      params[:radius],
+    )
+  end
+
   private
 
   def set_restaurant
