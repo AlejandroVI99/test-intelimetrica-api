@@ -21,11 +21,12 @@ class Restaurant < ApplicationRecord
         rating.append(restaurant.rating)
       end
     end
-    standard_deviation(restaurants_statistics, rating) if !rating.empty?
+    statistics_operations(restaurants_statistics, rating) if !rating.empty?
     restaurants_statistics
   end
 
-  def self.standard_deviation(restaurants_statistics, rating)
+  #this method returns the basics operations of statistics
+  def self.statistics_operations(restaurants_statistics, rating)
     avg = rating.sum / rating.length.to_f
     sum_of_squares = rating.map { |x| (x - avg)**2 }.sum
     variance = sum_of_squares / rating.length
