@@ -1,4 +1,5 @@
 json.restaurants @restaurants do |restaurant|
+  json.id restaurant.id
   json.rating restaurant.rating
   json.name restaurant.name
   json.site restaurant.site

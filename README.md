@@ -2,7 +2,7 @@
 This is a Rails API to perform a count of restaurants falling within the circle with center [x, y] and radius z.
 
 ## Render deploy URL
-https://api-test-w9yl.onrender.com
+https://api-test-1rjk.onrender.com
 
 ## Prerequisites
 Make sure you have Ruby (version 3.2.2) and Rails (version 7.1.3) installed on your system before getting started.

@@ -3,6 +3,7 @@ require 'csv'
 file = 'db/scripts/restaurantes.csv'
 
 CSV.foreach(file, headers: true) do |restaurant|
+  next if Restaurant.where(name: restaurant['name'])
   restaurant = Restaurant.create(
     rating: restaurant['rating'].to_i,
     name: restaurant['name'],
