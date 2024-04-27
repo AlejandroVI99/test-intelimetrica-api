@@ -1,4 +1,5 @@
 json.restaurant do
+  json.id @restaurant.id
   json.rating @restaurant.rating
   json.name @restaurant.name
   json.site @restaurant.site
